@@ -1,0 +1,348 @@
+/* ---------- General ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+
+/* ---------- Navigation ---------- */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+
+    padding: 18px 20px;
+
+    background: #111827;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+
+/* ---------- Common Sections ---------- */
+
+section {
+    padding: 90px 20px;
+}
+
+
+/* ---------- Home ---------- */
+
+#home {
+    min-height: 90vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #e0f2fe,
+        #f8fafc
+    );
+}
+
+#home h1 {
+    font-size: 60px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#home h2 {
+    font-size: 30px;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 25px;
+}
+
+
+/* ---------- Welcome Button ---------- */
+
+#welcomeBtn {
+    padding: 12px 28px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#welcomeBtn:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- About ---------- */
+
+#about {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
+    font-size: 36px;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+}
+
+#about p {
+    font-size: 18px;
+    color: #4b5563;
+}
+
+
+/* ---------- Skills ---------- */
+
+#skills {
+    text-align: center;
+    background: white;
+}
+
+#skills ul {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+#skills li {
+    background: #111827;
+    color: white;
+
+    padding: 10px 22px;
+
+    border-radius: 25px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+#skills li:hover {
+    background: #2563eb;
+    transform: translateY(-3px);
+}
+
+
+/* ---------- Projects ---------- */
+
+#projects {
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 30px;
+    flex-wrap: wrap;
+
+    margin-top: 30px;
+}
+
+.project-card {
+    background: white;
+
+    padding: 30px;
+
+    width: 320px;
+    min-height: 180px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition: all 0.3s ease;
+
+    text-align: left;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 12px;
+    font-size: 22px;
+}
+
+.project-card p {
+    color: #4b5563;
+}
+
+
+/* ---------- Contact ---------- */
+
+#contact {
+    text-align: center;
+    background: white;
+}
+
+#contact form {
+    max-width: 550px;
+    margin: 30px auto 0;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border 0.3s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #2563eb;
+}
+
+#contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contact button {
+    padding: 13px 30px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #2563eb;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#contact button:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+/* ---------- Mobile Responsive ---------- */
+
+@media (max-width: 768px) {
+
+    nav {
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    #home h1 {
+        font-size: 42px;
+    }
+
+    #home h2 {
+        font-size: 24px;
+    }
+
+    section {
+        padding: 70px 15px;
+    }
+
+    #about h2,
+    #skills h2,
+    #projects h2,
+    #contact h2 {
+        font-size: 30px;
+    }
+
+    .project-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+#social {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#social a {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#social a:hover {
+    opacity: 0.8;
+}
