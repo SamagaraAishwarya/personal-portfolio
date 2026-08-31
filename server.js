@@ -23,7 +23,7 @@ mongoose.connect(process.env.MONGO_URI)
     });
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "..", "index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/projects", function(req, res) {
