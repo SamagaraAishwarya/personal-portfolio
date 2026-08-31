@@ -62,7 +62,7 @@ form.addEventListener("submit", function(event) {
 
 
 
-fetch("http://localhost:5000/projects")
+fetch("/projects")
     .then(response => response.json())
     .then(projects => {
 
