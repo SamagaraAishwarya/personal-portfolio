@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Serve frontend files from the project root
-const frontendPath = path.join(process.cwd());
+const frontendPath = path.join(__dirname, "..");
 
 app.use(express.static(frontendPath));
 
