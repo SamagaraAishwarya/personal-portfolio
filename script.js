@@ -37,7 +37,7 @@ form.addEventListener("submit", function(event) {
     console.log(email);
     console.log(message);
 
-    fetch("http://localhost:5000/contact",{
+    fetch("https://personal-portfolio-production-8554.up.railway.app/contact", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
