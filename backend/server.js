@@ -4,19 +4,20 @@ const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+
 const Contact = require("./models/Contact");
 
 const app = express();
-
 const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Serve frontend files from the project root
+// Frontend is in the project root
 const frontendPath = path.join(__dirname, "..");
 
+// Serve frontend files
 app.use(express.static(frontendPath));
 
 // Home page
@@ -58,7 +59,7 @@ app.post("/contact", async function (req, res) {
         });
 
     } catch (error) {
-        console.log("Contact error:", error.message);
+        console.log("Contact error:", error);
 
         res.status(500).json({
             message: "Failed to send message"
@@ -76,7 +77,7 @@ if (process.env.MONGO_URI) {
             console.log("MongoDB connection failed:", error.message);
         });
 } else {
-    console.log("MONGO_URI is not configured");
+    console.log("MONGO_URI is not configured.");
 }
 
 // Start server
